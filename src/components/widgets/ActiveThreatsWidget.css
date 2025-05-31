@@ -1,0 +1,100 @@
+.active-threats-widget {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.threat-meter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.threat-meter-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.threat-total {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.threat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.threat-categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.threat-category {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.category-name {
+  color: var(--text-secondary);
+}
+
+.category-count {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.category-bar-container {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.category-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.category-bar.ransomware {
+  background: linear-gradient(90deg, var(--accent-tertiary), var(--accent-primary));
+}
+
+.category-bar.data-leaks {
+  background: linear-gradient(90deg, #ff9900, #ffcc00);
+}
+
+.category-bar.exploits {
+  background: linear-gradient(90deg, #cc00ff, #ff00ff);
+}
+
+.category-bar.malware {
+  background: linear-gradient(90deg, #ff3300, #ff6600);
+}
+
+.category-bar.phishing {
+  background: linear-gradient(90deg, #0099ff, #00ccff);
+}
+
+.category-bar.ddos {
+  background: linear-gradient(90deg, #00cc33, #00ff66);
+}
+
+.category-bar.botnets {
+  background: linear-gradient(90deg, #6600cc, #9900ff);
+}

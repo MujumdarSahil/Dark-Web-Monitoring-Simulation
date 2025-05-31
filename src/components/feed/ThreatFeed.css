@@ -1,0 +1,120 @@
+.threat-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  height: 100%;
+  animation: fadeIn 0.5s ease;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--accent-tertiary);
+  border-radius: var(--border-radius-md);
+}
+
+.feed-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.feed-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--accent-tertiary);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.feed-item {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--accent-tertiary);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-md);
+  transition: all 0.3s ease;
+}
+
+.feed-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--accent-secondary);
+}
+
+.feed-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.severity-badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.feed-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.feed-item-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.feed-item-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: var(--space-sm) 0;
+}
+
+.feed-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-sm);
+}
+
+.feed-item-tags {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.feed-tag {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.feed-item-source {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+}
+
+@keyframes newAlert {
+  from {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.feed-item-new {
+  animation: newAlert 2s ease;
+}

@@ -1,0 +1,131 @@
+.sidebar {
+  width: 240px;
+  height: 100%;
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--accent-tertiary);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--accent-tertiary);
+}
+
+.sidebar-logo {
+  color: var(--accent-primary);
+  margin-right: var(--space-sm);
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.user-status {
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-indicator.active {
+  background-color: var(--neon-green);
+  box-shadow: 0 0 5px var(--neon-green);
+  animation: pulse 2s infinite alternate;
+}
+
+.status-text {
+  font-size: 0.75rem;
+  color: var(--neon-green);
+  font-weight: 500;
+}
+
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md) 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 2px;
+}
+
+.nav-list li.active .nav-item {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+.nav-icon {
+  margin-right: var(--space-sm);
+  display: flex;
+  align-items: center;
+}
+
+.active .nav-icon,
+.active .nav-label {
+  color: var(--accent-primary);
+}
+
+.sidebar-footer {
+  padding: var(--space-md) 0;
+  border-top: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.bottom-nav-item {
+  opacity: 0.7;
+}
+
+.bottom-nav-item:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--accent-tertiary);
+  }
+  
+  .sidebar-header,
+  .user-status {
+    padding: var(--space-sm);
+  }
+}
